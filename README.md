@@ -79,28 +79,8 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Figure13.mlx`: generate Figure 13 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure13.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure13.mlx) | [Figure13.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure13.ipynb) |
 |`Figure14.mlx`: generate Figure 14 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure14.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure14.mlx) | [Figure14.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure14.ipynb) |
 |`Figure15.mlx`: generate Figure 15 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure15.ipynb) |
-|`Table1.mlx`: generate Table 1 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=
+|`Table1.mlx`  : generate Table 1 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure15.ipynb) |
 
-
-
-| FileName | View 👀 | Run ▶️ | Jupiter notebook |
-|----------|---------|--------|-----------------|
-| Figure1.mlx : generate Figure 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure1.ipynb](Figure1.ipynb) |
-| Figure2.mlx : generate Figure 2 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure2.ipynb](Figure2.ipynb) |
-| Figure3.mlx : generate Figure 3 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure3.ipynb](Figure3.ipynb) |
-| Figure4.mlx : generate Figure 4 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure4.ipynb](Figure4.ipynb) |
-| Figure5.mlx : generate Figure 5 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure5.ipynb](Figure5.ipynb) |
-| Figure6.mlx : generate Figure 6 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure6.ipynb](Figure6.ipynb) |
-| Figure7.mlx : generate Figure 7 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure7.ipynb](Figure7.ipynb) |
-| Figure8.mlx : generate Figure 8 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure8.ipynb](Figure8.ipynb) |
-| Figure9.mlx : generate Figure 9 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure9.ipynb](Figure9.ipynb) |
-| Figure10.mlx : generate Figure 10 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure10.ipynb](Figure10.ipynb) |
-| Figure11.mlx : generate Figure 11 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure11.ipynb](Figure11.ipynb) |
-| Figure12.mlx : generate Figure 12 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure12.ipynb](Figure12.ipynb) |
-| Figure13.mlx : generate Figure 13 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure13.ipynb](Figure13.ipynb) |
-| Figure14.mlx : generate Figure 14 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure14.ipynb](Figure14.ipynb) |
-| Figure15.mlx : generate Figure 15 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure15.ipynb](Figure15.ipynb) |
-| Table1.mlx : generate Table 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Table1.ipynb](Table1.ipynb) |
 
 Remark: in order to run the files we assume that the free MATLAB Add On FSDA must be installed.
 
