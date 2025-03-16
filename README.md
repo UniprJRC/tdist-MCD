@@ -25,6 +25,8 @@ This repository contains code and data to replicate all figures and tables from 
 ### Requirements
 
 Code for replication uses the following dependencies:
+- MATLAB license or the license-free MATLAB online (https://it.mathworks.com/products/matlab-online.html)
+- FSDA toolbox for MATLAB
 - R version X.X.X or higher
 - R packages: [list required packages]
 
@@ -34,6 +36,7 @@ To prepare your environment for replication:
 1. Clone this repository: `git clone https://github.com/username/reponame.git`
 2. Navigate to the repository directory: `cd reponame`
 3. Install required R packages: `Rscript install_packages.R`
+4. Install FSDA from "Install App" of the standard MATLAB distribution or go to https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox. FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
 
 ## Main Document
 
