@@ -11,12 +11,11 @@ Heavy-tailed distributions, such as the Student-*t* distribution, have long been
 ## Contents
 
 ### Main Document
-- [Figures (15)](#main-figures)
-- [Tables (1)](#main-tables)
+- [Code Files](#main-document-code-files)
+- [Replication Instructions](#replication-instructions)
 
 ### Supplementary Information
-- [Figures (7)](#si-figures)
-- [Tables (2)](#si-tables)
+- [Code Files](#supplementary-information-code-files)
 
 ## Replication Instructions
 
@@ -38,63 +37,80 @@ To prepare your environment for replication:
 3. Install required R packages: `Rscript install_packages.R`
 4. Install FSDA from "Install App" of the standard MATLAB distribution or go to https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox. FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
 
-## Main Document
+## Main Document Code Files
 
-This section provides instructions for reproducing all figures and tables from the main manuscript.
+In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file.
 
-### Main Figures
+### MATLAB live script files
 
-#### Figure 1
-Description of Figure 1
+The .mlx files contain both the code and the output that the code produces.
 
-To reproduce: `Rscript code/figure1.R`
+👀 To view the .mlx files click on the "File Exchange button"
 
-#### Figure 2
-Description of Figure 2
+▶️ To run the .mlx files in the free MATLAB on line click on "Run in MATLAB Online". The repo will be automatically cloned.
 
-To reproduce: `Rscript code/figure2.R`
+The Jupyter notebook version of the files is also given in the last column of the table below. Similarly to the .mlx files the Jupyter notebook files also contain both the code and the output produced by the code.
 
-<!-- Continue for all 15 figures -->
-#### Figures 3-15
-Description of remaining figures
+### Jupiter notebook files
 
-To reproduce Figures 3-15: `Rscript code/figures_3_to_15.R`
+To view the .ipynb files click on the corresponding link.
 
-### Main Tables
+To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ipynbRunInstructions.md.
 
-#### Table 1
-Description of Table 1
+| FileName | View 👀 | Run ▶️ | Jupiter notebook |
+|----------|---------|--------|-----------------|
+| Figure1.mlx : generate Figure 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure1.ipynb](Figure1.ipynb) |
+| Figure2.mlx : generate Figure 2 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure2.ipynb](Figure2.ipynb) |
+| Figure3.mlx : generate Figure 3 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure3.ipynb](Figure3.ipynb) |
+| Figure4.mlx : generate Figure 4 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure4.ipynb](Figure4.ipynb) |
+| Figure5.mlx : generate Figure 5 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure5.ipynb](Figure5.ipynb) |
+| Figure6.mlx : generate Figure 6 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure6.ipynb](Figure6.ipynb) |
+| Figure7.mlx : generate Figure 7 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure7.ipynb](Figure7.ipynb) |
+| Figure8.mlx : generate Figure 8 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure8.ipynb](Figure8.ipynb) |
+| Figure9.mlx : generate Figure 9 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure9.ipynb](Figure9.ipynb) |
+| Figure10.mlx : generate Figure 10 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure10.ipynb](Figure10.ipynb) |
+| Figure11.mlx : generate Figure 11 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure11.ipynb](Figure11.ipynb) |
+| Figure12.mlx : generate Figure 12 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure12.ipynb](Figure12.ipynb) |
+| Figure13.mlx : generate Figure 13 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure13.ipynb](Figure13.ipynb) |
+| Figure14.mlx : generate Figure 14 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure14.ipynb](Figure14.ipynb) |
+| Figure15.mlx : generate Figure 15 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Figure15.ipynb](Figure15.ipynb) |
+| Table1.mlx : generate Table 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [Table1.ipynb](Table1.ipynb) |
 
-To reproduce: `Rscript code/table1.R`
+Remark: in order to run the files we assume that the free MATLAB Add On FSDA must be installed.
 
-## Supplementary Information
+## Supplementary Information Code Files
 
-This section provides instructions for reproducing all figures and tables from the supplementary information document.
+In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file for the supplementary information.
 
-### SI Figures
+### MATLAB live script files
 
-#### SI Figure 1
-Description of SI Figure 1
+The .mlx files contain both the code and the output that the code produces.
 
-To reproduce: `Rscript code/si_figure1.R`
+👀 To view the .mlx files click on the "File Exchange button"
 
-<!-- Continue for all 7 SI figures -->
-#### SI Figures 2-7
-Description of remaining SI figures
+▶️ To run the .mlx files in the free MATLAB on line click on "Run in MATLAB Online". The repo will be automatically cloned.
 
-To reproduce SI Figures 2-7: `Rscript code/si_figures_2_to_7.R`
+The Jupyter notebook version of the files is also given in the last column of the table below. Similarly to the .mlx files the Jupyter notebook files also contain both the code and the output produced by the code.
 
-### SI Tables
+### Jupiter notebook files
 
-#### SI Table 1
-Description of SI Table 1
+To view the .ipynb files click on the corresponding link.
 
-To reproduce: `Rscript code/si_table1.R`
+To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ipynbRunInstructions.md.
 
-#### SI Table 2
-Description of SI Table 2
+| FileName | View 👀 | Run ▶️ | Jupiter notebook |
+|----------|---------|--------|-----------------|
+| SI_Figure1.mlx : generate SI Figure 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure1.ipynb](SI_Figure1.ipynb) |
+| SI_Figure2.mlx : generate SI Figure 2 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure2.ipynb](SI_Figure2.ipynb) |
+| SI_Figure3.mlx : generate SI Figure 3 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure3.ipynb](SI_Figure3.ipynb) |
+| SI_Figure4.mlx : generate SI Figure 4 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure4.ipynb](SI_Figure4.ipynb) |
+| SI_Figure5.mlx : generate SI Figure 5 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure5.ipynb](SI_Figure5.ipynb) |
+| SI_Figure6.mlx : generate SI Figure 6 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure6.ipynb](SI_Figure6.ipynb) |
+| SI_Figure7.mlx : generate SI Figure 7 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Figure7.ipynb](SI_Figure7.ipynb) |
+| SI_Table1.mlx : generate SI Table 1 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Table1.ipynb](SI_Table1.ipynb) |
+| SI_Table2.mlx : generate SI Table 2 | 🔄 File Exchange | 🔄 Open in MATLAB Online | [SI_Table2.ipynb](SI_Table2.ipynb) |
 
-To reproduce: `Rscript code/si_table2.R`
+Remark: in order to run the files we assume that the free MATLAB Add On FSDA must be installed.
 
 ## Additional Information
 
