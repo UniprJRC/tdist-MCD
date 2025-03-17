@@ -1,4 +1,4 @@
-% REPLICABILITY CODE: FIGURE 3
+%% This function generates Figure 3
 
 function [outSIM , varargout]= paper_Figure_3(n,p,nu,B,alpha0,data,model,savein)
 
