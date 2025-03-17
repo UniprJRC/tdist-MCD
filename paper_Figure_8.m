@@ -1,4 +1,4 @@
-% REPLICABILITY CODE: FIGURE 8
+%% This function generates Figure 8
 
 function [hfig] = paper_Figure_8(outSIM,emp_r,figclass,addtitle)
 
