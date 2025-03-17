@@ -22,7 +22,7 @@ Heavy-tailed distributions, such as the Student-*t* distribution, have long been
 
 ## Replication Instructions
 
-This repository contains code and data to replicate all figures and tables from both the main manuscript and the supplementary information document.
+This repository contains code and data to replicate all figures and tables from both the main manuscript and the supplementary information document. The MCD and few other functions rely on the free MATLAB Add On FSDA, which must be installed.
 
 ### Requirements
 
@@ -59,12 +59,10 @@ The Jupyter notebook version of the files is also given in the last column of th
 
 To view the .ipynb files click on the corresponding link.
 
-To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ipynbRunInstructions.md.
+To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file [![FipynbRunInstructions.md](https://github.com/UniprJRC/tdist-MCD/blob/main/aux/ipynbRunInstructions.md)
 
 
 ## Main Document Code Files: MATLAB functions
-
-The MCD and few other functions rely on the free MATLAB Add On FSDA, which must be installed.
 
 | FileName | View 👀 | Run ▶️ | Jupiter notebook |
 |----------|---------|--------|-----------------|
