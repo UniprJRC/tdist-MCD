@@ -38,6 +38,11 @@ function [data, labels] = contam_t_uniform(n, p, nu, epsilon, J, shift, je)
         xl = xlim; yl = ylim;
         xlim(1.1*xl); ylim(1.1*yl); 
     end
+    set(gcf,'Position',[214,338,1133,420]);
+
+    % make legend invisible
+    lgd = findobj('type', 'legend');
+    set(lgd, 'visible', 'off');
 %}
 
 %{
@@ -59,6 +64,10 @@ function [data, labels] = contam_t_uniform(n, p, nu, epsilon, J, shift, je)
         xl = xlim; yl = ylim;
         xlim(1.1*xl); ylim(1.1*yl); 
     end
+
+    % make legend invisible
+    lgd = findobj('type', 'legend');
+    set(lgd, 'visible', 'off');
 
     if ~exist('Fig11','dir')
         mkdir('Fig11');
