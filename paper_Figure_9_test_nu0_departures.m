@@ -10,7 +10,7 @@ function [out, out_S] = paper_Figure_9_test_nu0_departures(...
 % inferential tools for detecting departures from the correct degrees of
 % freedom. This function is used to estimate the power of this procedure.
 
-% This function was ariginally called paper_Figure_9_simstudy_Algo_Power.m
+% This function was originally called paper_Figure_9_simstudy_Algo_Power.m
 
 %{
     clear all;
@@ -30,7 +30,7 @@ function [out, out_S] = paper_Figure_9_test_nu0_departures(...
 
 %% data preparation
 
-% Load the estimated statistics
+% Load the estimated statistics (radius process percentiles)
 load('ksad','ksad');
 
 ksad_numel      = size(ksad,1);
