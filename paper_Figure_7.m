@@ -44,7 +44,7 @@ end
 X    = ksad.alpha(iiraw);
 Y    = log(ksad.n(iiraw));
 Z_KS = ksad.KolmogorovSmirnov(iiraw); 
-Z_AD = ksad.AndersenDarling(iiraw);
+Z_AD = ksad.AndersonDarling(iiraw);
 
 % Create a mesh grid for the fitted surface
 [X_mesh, Y_mesh] = meshgrid(linspace(min(X), max(X), 500), ...
@@ -93,7 +93,7 @@ Xjj    = ksad.alpha(jjraw);
 if isequal(which_stat , 'KS')
     Z_jj = ksad.KolmogorovSmirnov(jjraw); 
 elseif isequal(which_stat , 'AD')
-    Z_jj = ksad.AndersenDarling(jjraw);
+    Z_jj = ksad.AndersonDarling(jjraw);
 end
 
 min_Z = min(Z_jj) * 0.6;

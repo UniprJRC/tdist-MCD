@@ -34,7 +34,7 @@ opts2   = fitoptions('Method', 'LowessFit' , ...
     'Span', 0.2);
 
 [fit_c05sup, gof_c05sup] = fit( [ksad.alpha(iiraw) log(ksad.n(iiraw))],ksad.KolmogorovSmirnov(iiraw), ft2, opts2 );
-[fit_c05ad,  gof_c05ad]  = fit( [ksad.alpha(iiraw) log(ksad.n(iiraw))],ksad.AndersenDarling(iiraw),   ft2, opts2 );
+[fit_c05ad,  gof_c05ad]  = fit( [ksad.alpha(iiraw) log(ksad.n(iiraw))],ksad.AndersonDarling(iiraw),   ft2, opts2 );
 
 end
 

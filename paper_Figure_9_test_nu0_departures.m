@@ -113,7 +113,7 @@ for nu_true = nu0_values
 
                     iraw       = find((ksad.v == v) .* (ksad.nu == nu_true) .* (ksad.n == n) .* (ksad.alpha == alpha0a));
                     c05sup_est = ksad.KolmogorovSmirnov(iraw);
-                    c05and_est = ksad.AndersenDarling(iraw);
+                    c05and_est = ksad.AndersonDarling(iraw);
 
                     % find the corresponding KS bands
                     [c05sup_int,  c05and_int] = predict_critical(c05sup_fit, c05ad_fit, alpha0a, n);
