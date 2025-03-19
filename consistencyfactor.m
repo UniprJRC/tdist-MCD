@@ -1,11 +1,11 @@
-function eta_f = consistencyfactor(alpha,v,nu) 
+function eta_f = consistencyfactor(alpha,p,nu) 
 %eta_f computes the consistency factor for a scatter matrix
 %
 %<a href="matlab: docsearchFS('eta_f')">Link to the help function</a>
 %
-% If $\Sigma(v)$ denotes the dispersion matrix when an elliptical
-% population is conditioned on the central region $C_v$, then the
-% dispersion matrix of the full sample $\Sigma$ is related to $\Sigma(v)$
+% If $\Sigma(p)$ denotes the dispersion matrix when an elliptical
+% population is conditioned on the central region $C_p$, then the
+% dispersion matrix of the full sample $\Sigma$ is related to $\Sigma(p)$
 % by a constant multiplier. This function is used to obtain this constant
 % and, therefore, a consistent estimators of the scatter matrix $\Sigma$.
 % The consistency factor is used to adapt all of the scatter matrix
@@ -22,9 +22,9 @@ function eta_f = consistencyfactor(alpha,v,nu)
 %               Example - 'alpha',0.3
 %               Data Types - double
 %
-%       v     : Multivariate dimension. Scalar. Number of variables in the 
+%       p     : Multivariate dimension. Scalar. Number of variables in the 
 %               multivariate sample. 
-%               Example - 'v',2
+%               Example - 'p',2
 %               Data Types - double
 %
 %  Optional input arguments:
@@ -63,23 +63,23 @@ function eta_f = consistencyfactor(alpha,v,nu)
 %
 %{
     n  = 100;
-    v  = 2;
+    p  = 2;
     nu = 3;
 
     % 20% trimming
     alpha0a = 0.2;
 
     % case 'T'
-    Xt      = random('T',nu,[n,v]);
+    Xt      = random('T',nu,[n,p]);
     % case 'N'
-    XN      = random('Normal',0,1,[n,v]);
+    XN      = random('Normal',0,1,[n,p]);
 
     X  = Xt;
     MU = mean(X);
     Sigma = cov(X);
 
     Ytilde  = bsxfun(@minus,X, MU);
-    cfactor = consistencyfactor(alpha0a,v,nu);
+    cfactor = consistencyfactor(alpha0a,p,nu);
     d       = sqrt(sum((Ytilde/Sigma.*cfactor).*Ytilde,2));
 
     
@@ -97,8 +97,8 @@ if nargin<3 || isempty(nu) || nu == 0
     % This is the standard case, applied when uncontaminated data
     % are assumed to come from a multivariate Normal model.
 
-    a = chi2inv(retained,v);
-    eta_f = retained/(chi2cdf(a,v+2));
+    a = chi2inv(retained,p);
+    eta_f = retained/(chi2cdf(a,p+2));
 
 else
     % This is the case of a heavy-tail scenario, when
@@ -106,9 +106,9 @@ else
     % distribution. From Barabesi et al. (2023), Trimming
     % heavy-tailed multivariate data, submitted.
 
-    integrand   = @(u) 1 ./ (1 - betainv(u,v/2,nu/2));
+    integrand   = @(u) 1 ./ (1 - betainv(u,p/2,nu/2));
     theintegral = integral(integrand,0,retained);
-    eta_f  = ((nu-2) / (retained*v) * theintegral - (nu - 2)/v)^(-1);
+    eta_f  = ((nu-2) / (retained*p) * theintegral - (nu - 2)/p)^(-1);
 end
 end
 

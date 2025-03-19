@@ -36,7 +36,7 @@ end
 % load the estimated KS or AD statistics for a give v-nu combination
 load('ksad');
 
-iiraw = find((ksad.v == p) .* (ksad.nu == nu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax));
+iiraw = find((ksad.p == p) .* (ksad.nu == nu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax));
 if isempty(iiraw)
     error('Number of variables or degrees of freedom are out of range');
 end
@@ -85,7 +85,7 @@ n_grid = ones(size(alpha_grid)) * n;  % Fixed Y at n=100
 % Evaluate the surface fit at these points
 Z_curve = fitresult2(alpha_grid, log(n_grid));
 % get the KS and AD statistics, for a fixed n
-jjraw = find((ksad.v == p) .* (ksad.nu == nu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax) .* (ksad.n == n));
+jjraw = find((ksad.p == p) .* (ksad.nu == nu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax) .* (ksad.n == n));
 if isempty(jjraw)
     error('Number of variables or degrees of freedom are out of range');
 end

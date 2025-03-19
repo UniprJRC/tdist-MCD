@@ -60,7 +60,7 @@ numel_n         = numel(n_values);
 
 % the p values (this is v, in ksad)
 if isempty(p_values)
-    p_values    = unique(ksad.v)';
+    p_values    = unique(ksad.p)';
 end
 numel_p         = numel(p_values);
 
@@ -83,7 +83,7 @@ numel_epsilon0 = numel(epsilon0_values);
 ncomb = numel_J*numel_nu0*numel_epsilon0*numel_p*numel_n*numel_alpha;
 
 % initialisation of the output variables
-out_var_names = {'v','n','alpha0','ADpval_i','KSpval_i', 'KSaexe_i', ...
+out_var_names = {'p','n','alpha0','ADpval_i','KSpval_i', 'KSaexe_i', ...
     'nu_true','epsilon_true','J', ...
     'epsilon_hat_mean','nu_hat_mean','epsilon_hat_std','nu_hat_std', ...
     'epsilon_hat_median','nu_hat_median', ...
@@ -92,7 +92,7 @@ n_pos = length(out_var_names);
 out = NaN(ncomb , n_pos);
 
 % Initialize a table to store estimates of nu and epsilon in all replicates
-baseColumns   = {'J','v', 'n', 'alpha0','nu_true', 'epsilon_true'};
+baseColumns   = {'J','p', 'n', 'alpha0','nu_true', 'epsilon_true'};
 repColumns    = cellstr(strcat('rep', num2str((1:rep)', '%d')));
 colNames      = [baseColumns, repColumns'];
 rowNames      = arrayfun(@(x) sprintf('nu_true_%d', x), 1:ncomb, 'UniformOutput', false);

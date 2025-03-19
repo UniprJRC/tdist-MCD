@@ -1,4 +1,4 @@
-function F_R_inverse = radiusQuantile(C,v,nu)
+function F_R_inverse = radiusQuantile(C,p,nu)
 % Generalised radius for the Mahalanobis Squared Distance
 %
 %<a href="matlab: docsearchFS('radiusQuantile')">Link to the help function</a>
@@ -20,9 +20,9 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 %               Example - 'conflev',0.99
 %               Data Types - double
 %
-%       v     : Multivariate dimension. Scalar. Number of variables in the 
+%       p     : Multivariate dimension. Scalar. Number of variables in the 
 %               multivariate sample. 
-%               Example - 'v',2
+%               Example - 'p',2
 %               Data Types - double
 %
 %  Optional input arguments:
@@ -46,9 +46,9 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 % in the covariance matrix. If $x$ is an observation from a multivariate
 % distribution with mean $\mu$ and covariance $\Sigma$, the Mahalanobis
 % squared distance (MSD) of $x$ from $\mu$ is $D^{2}=(x − \mu)^{t}
-% \Sigma^{-1} (x − \mu)$. When $x$ is from a $v$-dimensional multivariate
+% \Sigma^{-1} (x − \mu)$. When $x$ is from a $p$-dimensional multivariate
 % normal with known mean and covariance, the population MSD is distributed
-% as a chi-squared $\chi_{v}^{2}$ random variable with $\nu$ degrees of
+% as a chi-squared $\chi_{p}^{2}$ random variable with $\nu$ degrees of
 % freedom (Mardia et al, 1979). Then, to test the deviation of an
 % observation from the multivariate normal assumption we can compare its
 % MSD with an appropriate quantile of the chi-squared distribution: the
@@ -60,7 +60,7 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 % distribution (Gnanadesikan and Kettenring, 1972). For continuous
 % Student-t samples, which account for heavy-tailed distributions, the
 % appropriate cutoff value depends from a standard Beta distribution with
-% shape parameters $v/2$ and $\nu/2$, as shown by Barabesi et al (2023).
+% shape parameters $p/2$ and $\nu/2$, as shown by Barabesi et al (2023).
 %
 % See also: mcd.m
 %
@@ -96,7 +96,7 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 %{
     % cutoff for a standard Normal.
     n  = 100;
-    v  = 3;
+    p  = 3;
     conflev = 0.975;
     cutoffN = msdcutoff(conflev,v);
 %}
@@ -104,7 +104,7 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 %{
     % cutoff for a Student-t.
     n  = 100;
-    v  = 3;
+    p  = 3;
     nu = 5;
     cutoffT = msdcutoff(conflev,v,nu);
 %}
@@ -113,13 +113,13 @@ function F_R_inverse = radiusQuantile(C,v,nu)
     %% cutoff values for robust squared Mahalanobis distances.
     
     n  = 100;
-    v  = 3;
+    p  = 3;
     nu = 5;
     conflev = 0.975;
 
     % sample from the T
-    Yt = random('T',nu,[n,v]); 
-    Yn = random('Normal',0,1,[n,v]); 
+    Yt = random('T',nu,[n,p]); 
+    Yn = random('Normal',0,1,[n,p]); 
 
     % mcd with the T-model
     RAWt = mcd(Yt,'modelT',nu,'plots',0);
@@ -142,9 +142,9 @@ function F_R_inverse = radiusQuantile(C,v,nu)
 %}
 
 if nargin < 3 || isempty(nu) || nu <= 0
-    F_R_inverse = chi2inv(C,v);
+    F_R_inverse = chi2inv(C,p);
 else
-    F_R_inverse = (1 - betainv(C,v/2,nu/2)).^(-1);
+    F_R_inverse = (1 - betainv(C,p/2,nu/2)).^(-1);
     F_R_inverse = (F_R_inverse - 1) * (nu - 2);
 end
 F_R_inverse = sqrt(F_R_inverse);

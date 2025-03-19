@@ -1,6 +1,6 @@
 %%  interpolating functions
 
-function [fit_c05sup, fit_c05ad, gof_c05sup, gof_c05ad] = fit_critical(ksad,vv,nunu)
+function [fit_c05sup, fit_c05ad, gof_c05sup, gof_c05ad] = fit_critical(ksad,pp,nunu)
 
 % We interpolate the estimated values using lowess.
 
@@ -21,7 +21,7 @@ function [fit_c05sup, fit_c05ad, gof_c05sup, gof_c05ad] = fit_critical(ksad,vv,n
 
 alphamin   = 0.05;
 alphamax   = 1; %0.30;
-iiraw = find((ksad.v == vv) .* (ksad.nu == nunu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax));
+iiraw = find((ksad.p == pp) .* (ksad.nu == nunu) .* (ksad.alpha >= alphamin) .* (ksad.alpha <= alphamax));
 
 if isempty(iiraw)
     error('Number of variables or degrees of freedom are out of range');

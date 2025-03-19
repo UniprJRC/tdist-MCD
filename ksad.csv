@@ -1,4 +1,4 @@
-v,nu,n,alpha,KolmogorovSmirnov,AndersonDarling,h
+p,nu,n,alpha,KolmogorovSmirnov,AndersonDarling,h
 2,0,50,0,0.964435754,0.208188056,50
 2,0,50,0.005,0.973644096,0.214761136,49
 2,0,50,0.01,0.954383175,0.202620263,49

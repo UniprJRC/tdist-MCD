@@ -1,5 +1,5 @@
 function [out, out_S] = paper_Figure_9_test_nu0_departures(...
-    rep, n_values, v_values, alpha0_values, ...
+    rep, n_values, p_values, alpha0_values, ...
     nu0_values, nu0_shifts)
 
 % This function is used to generate Figure 9. It is called by function
@@ -18,13 +18,13 @@ function [out, out_S] = paper_Figure_9_test_nu0_departures(...
     
     rep               = 1000;
     n_values          = [ ]; % take all n
-    v_values          = [5];
+    p_values          = [5];
     alpha0_values     = [0.025 0.05 0.10 0.15 0.20 0.25];
 
     nu0_values        = 5 ;
     nu0_shifts        = [-2 -1 0 1 2 15]; 
     
-    [out, out_S] = paper_Figure_9_test_nu0_departures(rep, n_values, v_values, alpha0_values, nu0_values, nu0_shifts)
+    [out, out_S] = paper_Figure_9_test_nu0_departures(rep, n_values, p_values, alpha0_values, nu0_values, nu0_shifts)
 
 %}
 
@@ -50,10 +50,10 @@ end
 numel_n         = numel(n_values);
 
 % the v values (this is p, in the paper)
-if isempty(v_values)
-    v_values    = unique(ksad.v)';
+if isempty(p_values)
+    p_values    = unique(ksad.p)';
 end
-numel_v         = numel(v_values);
+numel_p         = numel(p_values);
 
 % the alpha_0 values
 if isempty(alpha0_values)
@@ -68,10 +68,10 @@ end
 numel_nus      = numel(nu0_shifts);
 
 % number of combinations
-ncomb = numel_nus*numel_nu0*numel_v*numel_n*numel_alpha;                
+ncomb = numel_nus*numel_nu0*numel_p*numel_n*numel_alpha;                
 
 % initialisation of the output variables
-out_var_names = {'v','n','alpha0','nu_true','nu_shifted','ADpval_int','ADpval_est','KSpval_int','KSpval_est','KSaexe_int','KSaexe_est'};
+out_var_names = {'p','n','alpha0','nu_true','nu_shifted','ADpval_int','ADpval_est','KSpval_int','KSpval_est','KSaexe_int','KSaexe_est'};
 n_pos         = length(out_var_names);
 out           = NaN(ncomb , n_pos);
 
@@ -81,16 +81,16 @@ pos = 1;  % position of results in summary table
 
 for nu_true = nu0_values
 
-    for v = v_values
+    for p = p_values
 
-        [c05sup_fit, c05ad_fit] = fit_critical(ksad,v,nu_true);
+        [c05sup_fit, c05ad_fit] = fit_critical(ksad,p,nu_true);
 
         for n = n_values
 
             for alpha0a = alpha0_values
 
                 disp('  -------  ');
-                disp(['nu_true = ' num2str(nu_true) ' --- v = ' num2str(v) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
+                disp(['nu_true = ' num2str(nu_true) ' --- v = ' num2str(p) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
                 disp('  -------  ');
 
                 % set the nu grid, with nu > 2
@@ -106,12 +106,12 @@ for nu_true = nu0_values
                     % eta
                     %eta = 1 / consistencyfactor(1-alpha0a,v,nu);
                     % radius
-                    r = radiusQuantile(1-alpha,v,nu);
+                    r = radiusQuantile(1-alpha,p,nu);
                     r = r(:);
                     % density
-                    den = radiusDensity(r,v,nu);
+                    den = radiusDensity(r,p,nu);
 
-                    iraw       = find((ksad.v == v) .* (ksad.nu == nu_true) .* (ksad.n == n) .* (ksad.alpha == alpha0a));
+                    iraw       = find((ksad.p == p) .* (ksad.nu == nu_true) .* (ksad.n == n) .* (ksad.alpha == alpha0a));
                     c05sup_est = ksad.KolmogorovSmirnov(iraw);
                     c05and_est = ksad.AndersonDarling(iraw);
 
@@ -136,7 +136,7 @@ for nu_true = nu0_values
                     parfor B=1:rep
 
                         % generate (uncontaminated) data
-                        X  = randn(n,v) .* (sqrt(nu_true ./ chi2rnd(nu_true,n,1)));
+                        X  = randn(n,p) .* (sqrt(nu_true ./ chi2rnd(nu_true,n,1)));
 
                         % compute MCD 
                         RAW = mcd(X,'modelT',nu,'bdp',alpha0a,'smallsamplecor',false,'nsamp',500,'refsteps',10,'plots',0,'msg',0,'nocheck',1);
@@ -182,7 +182,7 @@ for nu_true = nu0_values
                     KSaexe_est = sum(KSsum_est./n)/rep; 
                     ADpval_est = sum(ADcheck_est)/rep; 
 
-                    out(pos,1)  = v;
+                    out(pos,1)  = p;
                     out(pos,2)  = n;
                     out(pos,3)  = alpha0a;
 

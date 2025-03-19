@@ -1,4 +1,4 @@
-function f_R = radiusDensity(r,v,nu)
+function f_R = radiusDensity(r,p,nu)
 %radiusDensity computes the non-squared Mahalanobis distance density
 %
 %<a href="matlab: docsearchFS('radiusDensity')">Link to the help function</a>
@@ -13,9 +13,9 @@ function f_R = radiusDensity(r,v,nu)
 %       r     : radius value. Scalar. The radius value, possibly computed  
 %               from a multivariate sample $X$. 
 %
-%       v     : Multivariate dimension. Scalar. Number of variables in the 
+%       p     : Multivariate dimension. Scalar. Number of variables in the 
 %               multivariate sample. 
-%               Example - 'v',2
+%               Example - 'p',2
 %               Data Types - double
 %
 %  Optional input arguments:
@@ -54,16 +54,16 @@ function f_R = radiusDensity(r,v,nu)
 %{
     % Radius density for normal and t-distribution
     n  = 100;
-    v  = 2;
+    p  = 2;
     nu = 3;
     alpha = (n-(1:n)+1) / (n+1);  
-    rN = chi2inv(alpha,v);
-    rt = (1 - betainv(alpha,v/2,nu/2)).^(-1);
+    rN = chi2inv(alpha,p);
+    rt = (1 - betainv(alpha,p/2,nu/2)).^(-1);
     rt = (rt - 1) * (nu - 2);
     rt = sqrt(rt);
 
-    dent   = radiusDensity(rt , v, nu); 
-    denN   = radiusDensity(rN , v); 
+    dent   = radiusDensity(rt , p, nu); 
+    denN   = radiusDensity(rN , p); 
     plot(rt,denN)
     hold on;
     plot(rN,dent)
@@ -78,22 +78,22 @@ if nargin<3 || isempty(nu) || nu <= 0
     % $f_X(x)$ is Normal. The squared Mahalanobis distance of a Gaussian
     % distribution is Chi-Square distributed but here we need the  
     % non-squared distances.
-    A  = r.^(v-1) .* exp(-(r.^2)/2);
-    B  = 2^(v/2 - 1) * gamma(v);
+    A  = r.^(p-1) .* exp(-(r.^2)/2);
+    B  = 2^(p/2 - 1) * gamma(p);
     f_R = A/B;
 else
     % $f_X(x)$ is T. The non-squared Mahalanobis distance of a T
     % distribution follows this:
-    A = 2*(beta(nu/2,v/2)*(nu-2)^(v/2))^(-1);
-    B = r.^(v-1);
-    C = (1 + (r.^2/(nu-2))).^(-(nu+v)/2);
+    A = 2*(beta(nu/2,p/2)*(nu-2)^(p/2))^(-1);
+    B = r.^(p-1);
+    C = (1 + (r.^2/(nu-2))).^(-(nu+p)/2);
     f_R = A .* B .* C;
 
     %{
     % This is equivalent to the above, using the gamma function
-    Ar = (2*gamma((nu+v)/2)) / (gamma(v/2)*gamma(nu/2)*(nu-2)^(v/2));
-    Br = r.^(v-1);
-    Cr = (1 + 1/(nu-2) * r.^2) .^ (-(nu+v)/2);
+    Ar = (2*gamma((nu+p)/2)) / (gamma(p/2)*gamma(nu/2)*(nu-2)^(p/2));
+    Br = r.^(p-1);
+    Cr = (1 + 1/(nu-2) * r.^2) .^ (-(nu+p)/2);
     f_R2 = Ar .* Br .* Cr;
     %}
 
