@@ -17,7 +17,8 @@ function [out, out_S] = paper_Figure_12_simstudy_Algo3(...
 
     J_values          = [1,2,3,4];
     
-    shift             = 10; % 5
+    shift             = 10; 
+    %shift             = 5 ; 
 
     saveResults = false;
 
