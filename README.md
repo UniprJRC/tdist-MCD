@@ -1,6 +1,6 @@
 # tdist-MCD
 
-Code to reproduce the figures of paper:
+Code to reproduce the figures and outcomes of the paper:
 
 # Robust distances and multivariate outlier detection under heavy tails
 # Main manuscript and Supplementary Information
@@ -41,6 +41,17 @@ To prepare your local environment for replication:
 3. Install FSDA from "Install App" of the standard MATLAB distribution (see https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox). FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
 4. Install required R packages: `Rscript install_packages.R`
 
+## Estimated $95\%$ quantiles of the Kolmogorov-Smirnov and Anderson-Darling
+
+The most important outcome of the paper are the $95\%$ quantiles of the Kolmogorov-Smirnov and Anderson-Darling
+statistics found with Algorithm 1 of Section 5 of the paper. The complete table, with statistics
+in full precision, is available in the files ksad.mat (matlab binary format), ksad.csv (comma-separated values), and ksad.xlsx (excel binary format). The table
+rows with $\nu$ conventionally set to 0, refer to the normal case, which should be practically
+equivalent to the case of $\nu = 50$, also included in the table. 
+The matlab script KSADtable.m is to reformat the table in a form tha can be included in a latex document.
+The script also shows how to generate the small extract in Table 2 of the Supplementary Information.  
+
+
 ## Main Document Code Files
 
 In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file.
@@ -74,7 +85,7 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Figure10.mlx`: | generate Figure 10 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure10.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure10.mlx) | [Figure10.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure10.ipynb) |
 |`Figure11.mlx`: | generate Figure 11 <br> and SI-Figure 5 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure11.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure11.mlx) | [Figure11.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure11.ipynb) |
 |`Figure12.mlx`: | generate Figure 12 <br> and SI-Figure 6 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure12.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure12.mlx) | [Figure12.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure12.ipynb) |
-|`Figure13.mlx`: | generate Figure 13 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure13.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure13.mlx) | [Figure13.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure13.ipynb) |
+|`Figure13.mlx`: | generate Figure 13 <br> and SI-Figure 7 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure13.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure13.mlx) | [Figure13.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure13.ipynb) |
 |`Figure14.mlx`: | generate Figure 14 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure14.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure14.mlx) | [Figure14.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure14.ipynb) |
 |`Figure15.mlx`: | generate Figure 15 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure15.ipynb) |
 |`Table1.mlx`  : | generate Table 1   | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Table1.ipynb) |
