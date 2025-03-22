@@ -38,7 +38,7 @@ document.
 
 Most of our codes are in MATLAB and we give the 
 possibility to run them freely on the "MATLAB Online" platform
-by The Mathworks: https://it.mathworks.com/products/matlab-online.html.
+by The Mathworks (see below).
 The platform can be used up to 20 hours per month, which is largely 
 sufficient to replicate all results except the simulation of the 
 KS and AD quantiles. For this reason, the github space includes these
