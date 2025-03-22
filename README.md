@@ -32,8 +32,18 @@ method.
 
 ## Replication Instructions
 
-This repository contains code and data to replicate all figures and tables 
-from both the main manuscript and the supplementary information document. 
+This repository contains code and data to replicate the relevant figures 
+and tables from both the main manuscript and the supplementary information 
+document. 
+
+Most of our codes are in MATLAB and we give the 
+possibility to run them freely on the "MATLAB Online" platform
+by The Mathworks: https://it.mathworks.com/products/matlab-online.html.
+The platform can be used up to 20 hours per month, which is largely 
+sufficient to replicate all results except the simulation of the 
+KS and AD quantiles. For this reason, the github space includes these
+estimates and the code to reproduce them in a licensed installation of MATLAB. 
+
 The MCD and few other functions rely on the free MATLAB Add On FSDA, 
 which must be installed.
 
@@ -43,14 +53,18 @@ Code for replication uses the following dependencies:
 - MATLAB, which can be used in two modalities:
 -   1) In a local standalone licensed installation 
 -   2) In the license-free MATLAB online (https://it.mathworks.com/products/matlab-online.html)
+<!---
 - R is used version X.X.X or higher
 - R packages: [list required packages]
+--->
 
 To prepare your local environment for replication:
 1. Clone this repository: `git clone https://github.com/UniprJRC/tdist-MCD.git`
 2. Navigate to the repository directory: `cd <your path to tdist-MCD>
 3. Install FSDA from "Install App" of the standard MATLAB distribution (see https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox). FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
+<!---
 4. Install required R packages: `Rscript install_packages.R`
+--->
 
 ## Estimated 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
 
@@ -103,6 +117,8 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Table1.mlx`  :    | generate Table 1   | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Table1.ipynb) |
 
 
+<!---
+
 ## Code Files: R functions
 
 | FileName | View 👀 | Run ▶️ | Jupiter notebook |
@@ -112,6 +128,7 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Figure4.mlx`: generate Figure 4 in R | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure4.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure4.mlx) | [Figure4.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure4.ipynb) |
 |`Figure5.mlx`: generate Figure 5 in R | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure5.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure5.mlx) | [Figure5.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure5.ipynb) |
 
+--->
 
 ## Additional Information
 
