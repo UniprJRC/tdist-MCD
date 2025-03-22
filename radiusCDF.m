@@ -1,4 +1,4 @@
-function F_R = radiusCDF(x,v,nu)
+function F_R = radiusCDF(x,p,nu)
 % Distribution function of the radius for the Mahalanobis Squared Distance
 %
 %<a href="matlab: docsearchFS('radiusCDF')">Link to the help function</a>
@@ -9,9 +9,9 @@ function F_R = radiusCDF(x,v,nu)
 %  Rbeta(x^2/(nu-2+x^2), p/2, nu/2)
 
 if nargin < 3 || isempty(nu) || nu <= 0
-    F_R = chi2cdf(x.^2,v);
+    F_R = chi2cdf(x.^2,p);
 else
-    F_R = betacdf(x.^2/(nu-2+x.^2), v/2, nu/2);
+    F_R = betacdf(x.^2/(nu-2+x.^2), p/2, nu/2);
 end
 end
 

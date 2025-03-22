@@ -104,7 +104,7 @@ for nu_true = nu0_values
                     % alpha
                     alpha = (1:n)/(n+1);
                     % eta
-                    %eta = 1 / consistencyfactor(1-alpha0a,v,nu);
+                    %eta = 1 / consistencyfactor(1-alpha0a,p,nu);
                     % radius
                     r = radiusQuantile(1-alpha,p,nu);
                     r = r(:);
@@ -142,7 +142,7 @@ for nu_true = nu0_values
                         RAW = mcd(X,'modelT',nu,'bdp',alpha0a,'smallsamplecor',false,'nsamp',500,'refsteps',10,'plots',0,'msg',0,'nocheck',1);
 
                         %{
-                        cfactor0a  = consistencyfactor(alpha0a,v);
+                        cfactor0a  = consistencyfactor(alpha0a,p);
                         Sigma_n    = RAW.cov / cfactor0a;
                         M_n        = RAW.loc;
                         %}

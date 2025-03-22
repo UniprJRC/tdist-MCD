@@ -98,7 +98,7 @@ function F_R_inverse = radiusQuantile(C,p,nu)
     n  = 100;
     p  = 3;
     conflev = 0.975;
-    cutoffN = msdcutoff(conflev,v);
+    cutoffN = msdcutoff(conflev,p);
 %}
 
 %{
@@ -106,7 +106,7 @@ function F_R_inverse = radiusQuantile(C,p,nu)
     n  = 100;
     p  = 3;
     nu = 5;
-    cutoffT = msdcutoff(conflev,v,nu);
+    cutoffT = msdcutoff(conflev,p,nu);
 %}
 
 %{
@@ -128,10 +128,10 @@ function F_R_inverse = radiusQuantile(C,p,nu)
     RAWn = mcd(Yn,'plots',0);
 
     % T-cutoff
-    cutoffT = msdcutoff(conflev,v,nu);
+    cutoffT = msdcutoff(conflev,p,nu);
 
     % Normal-cutoff
-    cutoffN = msdcutoff(conflev,v);
+    cutoffN = msdcutoff(conflev,p);
 
     plot(1:n,RAWt.md,'xr' , 1:n,RAWn.md,'ob'); 
     hold on;

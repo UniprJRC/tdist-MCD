@@ -210,7 +210,7 @@ end
         else
             error('non existent statistic');
         end
-        % the rows to be chosen for the given v, and nu
+        % the rows to be chosen for the given p, and nu
         ii = and(p==my_p , nu == my_nu);
     
         % Create a regular grid for interpolation

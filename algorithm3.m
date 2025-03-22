@@ -287,7 +287,7 @@ set(gca,'FontSize',SizeAxesNum);
 hfigMCD = figure;
 hold on
 
-v = numel(RAW.loc);
+p = numel(RAW.loc);
 
 % Plot regular observations (non-outliers) in grey
 regular_obs = setdiff(1:size(X,1), RAW.outliers);
@@ -307,7 +307,7 @@ scatter(RAW.loc(1), RAW.loc(2), 400, 'b', '*', 'LineWidth', 2, 'DisplayName', 'E
 cov_2d = RAW.cov(1:2, 1:2);
 % Calculate points for the ellipse
 %theintegral = chi2inv(0.975, 2);  % 97.5% confidence level with 2 degrees of freedom
-integrand   = @(u) 1 ./ (1 - betainv(u,v/2,nu/2));
+integrand   = @(u) 1 ./ (1 - betainv(u,p/2,nu/2));
 theintegral = integral(integrand,0,0.975);
 
 [eigvec, eigval] = eig(cov_2d);
