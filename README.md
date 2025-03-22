@@ -9,18 +9,35 @@ Code to reproduce the figures and outcomes of the paper:
 
 ## Abstract
 
-Heavy-tailed distributions, such as the Student-*t* distribution, have long been advocated as "robust" models for multivariate data in many fields. The underlying rationale is that robustness should be achieved by letting the classical maximum-likelihood estimators accommodate extreme observations naturally arising from the process under investigation. However, there is growing recognition that contamination might also occur under non-Gaussian scenarios. In this work we develop a unified approach which exploits high-breakdown estimation to ensure robust estimation of location, scatter and tail parameters under contamination of a multivariate Student-*t* distribution, when the latter is assumed to rule the data generating process of the uncontaminated part of the data. The framework that allows us to achieve our unified approach is the theory of generalized radius processes. In this framework, we first obtain the influence function of the main statistical functionals associated to robust Mahalanobis distances. We then suggest new statistics for measuring conformance to the multivariate Student-*t* distribution and an automatic procedure to infer the true values of the degrees of freedom and of the contamination rate. Along our path, we tackle several computational challenges associated to Monte Carlo estimation of the required radius-process quantiles and we provide extensive simulation evidence of the accuracy of our method.
-
-## Contents
-
-- [Code Files](#code-files)
-- [Replication Instructions](#replication-instructions)
+Heavy-tailed distributions, such as the Student-*t* distribution, have long 
+been advocated as "robust" models for multivariate data in many fields. 
+The underlying rationale is that robustness should be achieved by letting 
+the classical maximum-likelihood estimators accommodate extreme observations 
+naturally arising from the process under investigation. However, there is 
+growing recognition that contamination might also occur under non-Gaussian 
+scenarios. In this work we develop a unified approach which exploits 
+high-breakdown estimation to ensure robust estimation of location, scatter 
+and tail parameters under contamination of a multivariate Student-*t* 
+distribution, when the latter is assumed to rule the data generating process 
+of the uncontaminated part of the data. The framework that allows us to achieve
+our unified approach is the theory of generalized radius processes. In this 
+framework, we first obtain the influence function of the main statistical 
+functionals associated to robust Mahalanobis distances. We then suggest new 
+statistics for measuring conformance to the multivariate Student-*t* distribution
+and an automatic procedure to infer the true values of the degrees of freedom 
+and of the contamination rate. Along our path, we tackle several computational 
+challenges associated to Monte Carlo estimation of the required radius-process 
+quantiles and we provide extensive simulation evidence of the accuracy of our 
+method.
 
 ## Replication Instructions
 
-This repository contains code and data to replicate all figures and tables from both the main manuscript and the supplementary information document. The MCD and few other functions rely on the free MATLAB Add On FSDA, which must be installed.
+This repository contains code and data to replicate all figures and tables 
+from both the main manuscript and the supplementary information document. 
+The MCD and few other functions rely on the free MATLAB Add On FSDA, 
+which must be installed.
 
-### Requirements
+## Requirements and setup
 
 Code for replication uses the following dependencies:
 - MATLAB, which can be used in two modalities:
@@ -29,28 +46,28 @@ Code for replication uses the following dependencies:
 - R is used version X.X.X or higher
 - R packages: [list required packages]
 
-### Setup
-
 To prepare your local environment for replication:
 1. Clone this repository: `git clone https://github.com/UniprJRC/tdist-MCD.git`
 2. Navigate to the repository directory: `cd <your path to tdist-MCD>
 3. Install FSDA from "Install App" of the standard MATLAB distribution (see https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox). FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
 4. Install required R packages: `Rscript install_packages.R`
 
-## Estimated $95\%$ quantiles of the Kolmogorov-Smirnov and Anderson-Darling
+## Estimated 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
 
-The most important outcome of the paper are the 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
-statistics found with Algorithm 1 of Section 5 of the paper. The complete table, with statistics
-in full precision, is available in the files ksad.mat (matlab binary format), ksad.csv (comma-separated values), and ksad.xlsx (excel binary format). The table
-rows with $\nu$ conventionally set to 0, refer to the normal case, which should be practically
-equivalent to the case of $\nu = 50$, also included in the table. 
-The matlab script KSADtable.m is to reformat the table in a form tha can be included in a latex document.
-The script also shows how to generate the small extract in Table 2 of the Supplementary Information.  
-
+The key outcome of the paper is the table containing the 95% quantiles 
+of the Kolmogorov-Smirnov and Anderson-Darling statistics found with Algorithm 1. 
+The table with the statistics in full precision is available in the 
+files *ksad.mat* (matlab binary format), *ksad.csv* (comma-separated values), 
+and *ksad.xlsx* (excel binary format). The rows with $\nu$ conventionally set to 0 
+refer to the normal case, which should be practically equivalent to the case 
+of $\nu = 50$, also included in the table. The matlab script *KSADtable.m* 
+is to reformat the table in latex. The script also shows how to generate 
+the small extract in Table 2  of the Supplementary Information.  
 
 ## Code Files
 
-In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file.
+In the table below you can find the original source (MATLAB live script): 
+.mlx file and the corresponding .ipynb file.
 
 ### MATLAB live script files
 
@@ -99,6 +116,7 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 
 ## Additional Information
 
-For questions or issues regarding the replication code, please open an issue in this repository.
+For questions or issues regarding the replication code, please open an 
+issue in this repository.
 
 > Author information and additional acknowledgments will be added after the peer review process is complete.
