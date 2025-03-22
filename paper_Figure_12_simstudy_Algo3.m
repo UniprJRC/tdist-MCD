@@ -133,7 +133,7 @@ for J = J_values
                         mcd_FNR         = NaN(rep,1);
 
                         disp('  -------  ');
-                        disp(['nu_true = ' num2str(nu_true)  ' --- epsilon_true = ' num2str(epsilon_true) ' --- v = ' num2str(p) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
+                        disp(['nu_true = ' num2str(nu_true)  ' --- epsilon_true = ' num2str(epsilon_true) ' --- p = ' num2str(p) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
                         disp('  -------  ');
 
                         % set the epsilon grid, with epsilon < alpha0a
@@ -254,7 +254,7 @@ for J = J_values
 
                             out_B_epsilon.J(pos) = J;
                             out_B_epsilon.n(pos) = n;
-                            out_B_epsilon.v(pos) = p;
+                            out_B_epsilon.p(pos) = p;
                             out_B_epsilon.alpha0(pos)       = alpha0a;
                             out_B_epsilon.nu_true(pos)      = nu_true;
                             out_B_epsilon.epsilon_true(pos) = epsilon_true;
@@ -262,7 +262,7 @@ for J = J_values
 
                             out_B_nu.J(pos) = J;
                             out_B_nu.n(pos) = n;
-                            out_B_nu.v(pos) = p;
+                            out_B_nu.p(pos) = p;
                             out_B_nu.alpha0(pos)       = alpha0a;
                             out_B_nu.nu_true(pos)      = nu_true;
                             out_B_nu.epsilon_true(pos) = epsilon_true;

@@ -32,7 +32,7 @@
 % 
 %% Data preparation
 
-% Here we set the combination of v and nu that will be plotted
+% Here we set the combination of p and nu that will be plotted
 my_p    = 2;
 my_nu   = 5;
 

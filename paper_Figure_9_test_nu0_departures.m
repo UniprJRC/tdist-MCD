@@ -49,7 +49,7 @@ if isempty(n_values)
 end
 numel_n         = numel(n_values);
 
-% the v values (this is p, in the paper)
+% the p values 
 if isempty(p_values)
     p_values    = unique(ksad.p)';
 end
@@ -90,7 +90,7 @@ for nu_true = nu0_values
             for alpha0a = alpha0_values
 
                 disp('  -------  ');
-                disp(['nu_true = ' num2str(nu_true) ' --- v = ' num2str(p) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
+                disp(['nu_true = ' num2str(nu_true) ' --- p = ' num2str(p) ' --- n = ' num2str(n) ' --- alpha0a = ' num2str(alpha0a)]);
                 disp('  -------  ');
 
                 % set the nu grid, with nu > 2

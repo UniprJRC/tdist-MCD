@@ -60,7 +60,7 @@ Csup    = [outSIM.Csup];
 Cand    = [outSIM.Cand];
 B       = outSIM.B;
 alpha0  = outSIM.alpha0;
-v       = outSIM.v;
+p       = outSIM.p;
 nu      = outSIM.nu;
 c05sup  = [outSIM.c05sup];
 c05and  = [outSIM.c05and];
@@ -77,11 +77,11 @@ for in=1:nn
     % alpha
     alpha = (1:n)/(n+1);
     % eta
-    eta = 1 / consistencyfactor(1-alpha0,v,nu);
+    eta = 1 / consistencyfactor(1-alpha0,p,nu);
     % radius
-    r = radiusQuantile(1-alpha,v,nu);
+    r = radiusQuantile(1-alpha,p,nu);
     % density
-    den = radiusDensity(r,v,nu);
+    den = radiusDensity(r,p,nu);
 
     % take as an example K realizations  (from the first)
     K = 1;
@@ -107,13 +107,13 @@ for in=1:nn
     ylabel('$F_{R}^{-1}$','Interpreter','latex','FontSize',3+FontSize);
     axis manual
     if addtitle
-        title(afig,{['$' 'n=' num2str(n)  '\mbox{ ; } \; \alpha_0=' num2str(alpha0) '\mbox{ ; } \; p=' num2str(v) '\mbox{ ; } \; \nu=' num2str(nu) '$']},'Interpreter','Latex','FontSize',FontSize);
+        title(afig,{['$' 'n=' num2str(n)  '\mbox{ ; } \; \alpha_0=' num2str(alpha0) '\mbox{ ; } \; p=' num2str(p) '\mbox{ ; } \; \nu=' num2str(nu) '$']},'Interpreter','Latex','FontSize',FontSize);
     end
 
     ylim([0 10]);
     set(gca,'FontSize',SizeAxesNum);
 
-    combination = ['n' num2str(n)  '_alpha0' num2str(100*alpha0) '_p' num2str(v) '_nu' num2str(nu)];
+    combination = ['n' num2str(n)  '_alpha0' num2str(100*alpha0) '_p' num2str(p) '_nu' num2str(nu)];
     saveas(hfig,[figdir filesep figclass combination '.fig'],'fig');
     pause(1)
     saveas(hfig,[figdir filesep figclass combination '.eps'],'epsc');

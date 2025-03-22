@@ -174,7 +174,7 @@ end
 
 %% Loops
 
-% v and nu are supposed to be fixed
+% p and nu are supposed to be fixed
 % n and alpha0 can vary depending on the simulation
 nvec     = n;
 nn       = numel(nvec);
@@ -312,7 +312,7 @@ WWU{i_n} = WU;
 %% output structure
 
 outSIM(i_n,1).n        = n;
-outSIM(i_n,1).v        = p;
+outSIM(i_n,1).p        = p;
 outSIM(i_n,1).nu       = nu;
 outSIM(i_n,1).B        = B;
 outSIM(i_n,1).alpha0   = alpha0;

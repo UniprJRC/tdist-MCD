@@ -1,4 +1,4 @@
-function C = radiusProcess(d,v,nu)
+function C = radiusProcess(d,p,nu)
 
 % ellipsoids of decreasing radius define increasing levels of trimming
 
@@ -16,9 +16,9 @@ W = zeros(n,1);
 for i = 1:n
     alpha = (n-i+1) / (n+1);
     % radius
-    r    = radiusQuantile(alpha , v , nu); 
+    r    = radiusQuantile(alpha , p , nu); 
     % radius density
-    den  = radiusDensity(r , v , nu);
+    den  = radiusDensity(r , p , nu);
     W(i) = sqrt(n) * den  * (d(n-i+1) -  r);
 end
 
