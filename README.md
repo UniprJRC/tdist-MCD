@@ -13,12 +13,8 @@ Heavy-tailed distributions, such as the Student-*t* distribution, have long been
 
 ## Contents
 
-### Main manuscript
-- [Code Files](#main-document-code-files)
+- [Code Files](#code-files)
 - [Replication Instructions](#replication-instructions)
-
-### Supplementary Information
-- [Code Files](#supplementary-information-code-files)
 
 ## Replication Instructions
 
@@ -43,7 +39,7 @@ To prepare your local environment for replication:
 
 ## Estimated $95\%$ quantiles of the Kolmogorov-Smirnov and Anderson-Darling
 
-The most important outcome of the paper are the $95\%$ quantiles of the Kolmogorov-Smirnov and Anderson-Darling
+The most important outcome of the paper are the 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
 statistics found with Algorithm 1 of Section 5 of the paper. The complete table, with statistics
 in full precision, is available in the files ksad.mat (matlab binary format), ksad.csv (comma-separated values), and ksad.xlsx (excel binary format). The table
 rows with $\nu$ conventionally set to 0, refer to the normal case, which should be practically
@@ -52,7 +48,7 @@ The matlab script KSADtable.m is to reformat the table in a form tha can be incl
 The script also shows how to generate the small extract in Table 2 of the Supplementary Information.  
 
 
-## Main Document Code Files
+## Code Files
 
 In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file.
 
@@ -73,7 +69,7 @@ To view the .ipynb files click on the corresponding link.
 To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ![FipynbRunInstructions.md](https://github.com/UniprJRC/tdist-MCD/blob/main/aux/ipynbRunInstructions.md)
 
 
-## Main Document Code Files: MATLAB functions
+## Code Files: MATLAB functions
 
 | FileName | Description | View 👀 | Run ▶️ | Jupiter notebook |
 |----------|---------|---------|--------|-----------------|
@@ -91,7 +87,7 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Table1.mlx`  : | generate Table 1   | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure15.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure15.mlx) | [Figure15.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Table1.ipynb) |
 
 
-## Main Document Code Files: R functions
+## Code Files: R functions
 
 | FileName | View 👀 | Run ▶️ | Jupiter notebook |
 |----------|---------|--------|-----------------|
@@ -99,39 +95,6 @@ To run the .ipynb files inside the agnostic environment jupyter notebook follow 
 |`Figure2.mlx`: generate Figure 2 in R | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure2.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure2.mlx) | [Figure2.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure2.ipynb) |
 |`Figure4.mlx`: generate Figure 4 in R | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure4.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure4.mlx) | [Figure4.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure4.ipynb) |
 |`Figure5.mlx`: generate Figure 5 in R | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure5.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure5.mlx) | [Figure5.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/Figure5.ipynb) |
-
-
-## Supplementary Information Code Files
-
-In the table below you can find the original source (MATLAB live script): .mlx file and the corresponding .ipynb file for the supplementary information.
-
-### MATLAB live script files
-
-The .mlx files contain both the code and the output that the code produces.
-
-👀 To view the .mlx files click on the "File Exchange button"
-
-▶️ To run the .mlx files in the free MATLAB on line click on "Run in MATLAB Online". The repo will be automatically cloned.
-
-The Jupyter notebook version of the files is also given in the last column of the table below. Similarly to the .mlx files the Jupyter notebook files also contain both the code and the output produced by the code.
-
-### Jupiter notebook files
-
-To view the .ipynb files click on the corresponding link.
-
-To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ipynbRunInstructions.md under the aux folder.
-
-| FileName | View 👀 | Run ▶️ | Jupiter notebook |
-|----------|---------|--------|-----------------|
-|`SI_Figure1.mlx`: generate SI Figure 1 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure1.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure1.mlx) | [Figure1.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure1.ipynb) |
-|`SI_Figure2.mlx`: generate SI Figure 2 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure2.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure2.mlx) | [Figure2.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure2.ipynb) |
-|`SI_Figure3.mlx`: generate SI Figure 3 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure3.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure3.mlx) | [Figure3.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure3.ipynb) |
-|`SI_Figure4.mlx`: generate SI Figure 4 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure4.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure4.mlx) | [Figure4.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure4.ipynb) |
-|`SI_Figure5.mlx`: generate SI Figure 5 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure5.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure5.mlx) | [Figure5.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure5.ipynb) |
-|`SI_Figure6.mlx`: generate SI Figure 6 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure6.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure6.mlx) | [Figure6.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure6.ipynb) |
-|`SI_Figure7.mlx`: generate SI Figure 7 | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure7.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure7.mlx) | [Figure7.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Figure7.ipynb) |
-|`SI_Table1.mlx` : generate SI Table 1  | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure8.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure8.mlx) | [Figure8.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Table1.ipynb) |
-|`SI_Table2.mlx` : generate SI Table 2  | [![File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2Ff026de45-4ab8-44ed-85a3-1549ae68987b%2F1741121020%2Ffiles%2FFigure9.mlx&embed=web) | [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=UniprJRC/tdist-MCD&file=Figure9.mlx) | [Figure9.ipynb](https://github.com/UniprJRC/tdist-MCD/blob/main/SI_Table2.ipynb) |
 
 
 ## Additional Information
