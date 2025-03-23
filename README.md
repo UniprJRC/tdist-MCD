@@ -62,13 +62,13 @@ information document. These codes can be used in two modalities:
 - 2) In the license-free MATLAB Online: https://it.mathworks.com/products/matlab-online.html
 
 
-### To prepare your local environment for replication (option 1)
+### To prepare your local environment 
 1. Clone this repository: `git clone https://github.com/UniprJRC/tdist-MCD.git`
 2. Navigate to the repository directory: `cd <your path to tdist-MCD>
 3. Install FSDA from "Install App" of the standard MATLAB distribution 
 
 
-### To use MATLAB Online (option 2)
+### To use MATLAB Online
 The free "MATLAB Online" platform can be used up to 20 hours a month, 
 which are sufficient to replicate all results except the simulation 
 of the KS and AD quantiles. For this, it is sufficient to click on the
@@ -107,7 +107,7 @@ To view the .ipynb files click on the corresponding link.
 To run the .ipynb files inside the agnostic environment jupyter notebook follow the instructions in the file ![FipynbRunInstructions.md](https://github.com/UniprJRC/tdist-MCD/blob/main/aux/ipynbRunInstructions.md)
 
 
-## Code Files: MATLAB functions
+### Links to the main functions
 
 | FileName | Description | View 👀 | Run ▶️ | Jupiter notebook |
 |----------|---------|---------|--------|-----------------|
