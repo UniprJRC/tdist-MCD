@@ -3,7 +3,6 @@
 Code to reproduce the figures and outcomes of the paper:
 
 # Robust distances and multivariate outlier detection under heavy tails
-# Main manuscript and Supplementary Information
 
 > **Note:** This repository contains code and instructions for replicating the results of a paper currently under peer review. Author information is intentionally omitted.
 
@@ -30,53 +29,61 @@ challenges associated to Monte Carlo estimation of the required radius-process
 quantiles and we provide extensive simulation evidence of the accuracy of our 
 method.
 
-## Replication Instructions
+## Estimated 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
 
-This repository contains code and data to replicate the relevant figures 
-and tables from both the main manuscript and the supplementary information 
-document. 
+The key outcome of the paper is the table containing the 95% quantiles 
+of the Kolmogorov-Smirnov (KS) and Anderson-Darling (AD) statistics found 
+with Algorithm 1. 
+The table with the statistics in full precision is available in the 
+files *ksad.mat* (matlab binary format), *ksad.csv* (comma-separated values), 
+and *ksad.xlsx* (excel binary format). The rows with $\nu$ conventionally set to 0 
+refer to the normal case, which should be practically equivalent to the case 
+of $\nu = 50$, also included in the table. *Table1.mlx* or the matlab script 
+*KSADtable.m* load the data and allow to reformat the table in latex.
+The script also shows how to generate the small extract in Table 2  
+of the Supplementary Information.  
 
-Most of our codes are in MATLAB and we give the 
-possibility to run them freely on the "MATLAB Online" platform
-by The Mathworks (see below).
-The platform can be used up to 20 hours per month, which is largely 
-sufficient to replicate all results except the simulation of the 
-KS and AD quantiles. For this reason, the github space includes these
-estimates and the code to reproduce them in a licensed installation of MATLAB. 
 
-The MCD and few other functions rely on the free MATLAB Add On FSDA, 
-which must be installed.
+## FSDA and other dependencies
 
-## Requirements and setup
+The MCD estimator, which is at the core of the paper, and few other useful
+functions rely on the free MATLAB Add-On *FSDA* 
+(see https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox). 
+FSDA requires the Statistical and Machine Learning Toolbox. The Parallel 
+Processing Toolbox is necessary if the reader needs to replicate the estimates, 
+which take lot of time otherwise.
 
-Code for replication uses the following dependencies:
-- MATLAB, which can be used in two modalities:
--   1) In a local standalone licensed installation 
--   2) In the license-free MATLAB online (https://it.mathworks.com/products/matlab-online.html)
+## Results replication: requirements and setup
+
+This repository provides the MATLAB code and the data necessary to replicate the 
+main figures and tables from both the main manuscript and the supplementary 
+information document. These codes can be used in two modalities: 
+- 1) In a standalone MATLAB licensed installation; 
+- 2) In the license-free MATLAB Online: https://it.mathworks.com/products/matlab-online.html
+
+
+### To prepare your local environment for replication (option 1)
+1. Clone this repository: `git clone https://github.com/UniprJRC/tdist-MCD.git`
+2. Navigate to the repository directory: `cd <your path to tdist-MCD>
+3. Install FSDA from "Install App" of the standard MATLAB distribution 
+
+
+### To use MATLAB Online (option 2)
+The free "MATLAB Online" platform can be used up to 20 hours a month, 
+which are sufficient to replicate all results except the simulation 
+of the KS and AD quantiles. For this, it is sufficient to click on the
+link in the table below. Once you are in the MATLAB cloud environment,
+go under the "Add Ons section" of the "Home tab" and install FSDA. 
+
 <!---
 - R is used version X.X.X or higher
 - R packages: [list required packages]
 --->
 
-To prepare your local environment for replication:
-1. Clone this repository: `git clone https://github.com/UniprJRC/tdist-MCD.git`
-2. Navigate to the repository directory: `cd <your path to tdist-MCD>
-3. Install FSDA from "Install App" of the standard MATLAB distribution (see https://it.mathworks.com/matlabcentral/fileexchange/72999-fsda-flexible-statistics-data-analysis-toolbox). FSDA requires the Statistical and Machine Learning Toolbox. The parallel processing Toolbox is necessary if the reader needs to replicate the estimates, which take lot of time otherwise.
 <!---
 4. Install required R packages: `Rscript install_packages.R`
 --->
 
-## Estimated 95% quantiles of the Kolmogorov-Smirnov and Anderson-Darling
-
-The key outcome of the paper is the table containing the 95% quantiles 
-of the Kolmogorov-Smirnov and Anderson-Darling statistics found with Algorithm 1. 
-The table with the statistics in full precision is available in the 
-files *ksad.mat* (matlab binary format), *ksad.csv* (comma-separated values), 
-and *ksad.xlsx* (excel binary format). The rows with $\nu$ conventionally set to 0 
-refer to the normal case, which should be practically equivalent to the case 
-of $\nu = 50$, also included in the table. The matlab script *KSADtable.m* 
-is to reformat the table in latex. The script also shows how to generate 
-the small extract in Table 2  of the Supplementary Information.  
 
 ## Code Files
 
