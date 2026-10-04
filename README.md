@@ -2,9 +2,11 @@
 
 Code to reproduce the figures and outcomes of the paper:
 
-# Robust distances and multivariate outlier detection under heavy tails
+# Barabesi, L., Cerioli, A., García-Escudero, L.A. et al. Robust distances and multivariate outlier detection under heavy tails. Stat Comput 36, 89 (2026). https://doi.org/10.1007/s11222-026-10852-6
 
+<!---
 > **Note:** This repository contains code and instructions for replicating the results of a paper currently under peer review. Author information is intentionally omitted.
+--->
 
 ## Abstract
 
